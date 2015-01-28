@@ -1,0 +1,234 @@
+/* CSS Document - Developed by Fabio Rocha (http://fabiorochafg.github.io | fabiorochafg@gmail.com) */
+
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
+
+* {
+    border: 0 none;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+}
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a,
+a:active {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+body {
+    background: #fff;
+    font-family: 'Coming Soon', cursive;
+    font-size: 200%;
+}
+img {
+    border: 7px solid #fff;
+}
+    img.photo {
+        display: flex;
+        display: table;
+        margin: 0 auto;
+        width: 50%;
+    }
+    img.profile {
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        height: 130px;
+        margin: 0 10px;
+        width: 130px; 
+    }
+footer {
+    bottom: 0;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+header {
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+section {
+    position: relative;
+}
+section > div {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 150px 100px;
+}
+    section:last-child > div {
+        background: none;
+    }
+section p.date {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px 0 0 20px;
+    color: #fff;
+    font-size: 50%;
+    padding: 10px 30px 10px 20px;
+    position: absolute;
+    right: 0;
+}
+section p.text {
+    margin: 0 auto;
+    padding: 0 0 20px;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    width: 50%;
+}
+    section p.text strong {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+section[data-order="1"] {
+    background: url(../images/bg1.png) repeat 0 0;
+    background-attachment: fixed;
+}
+    section[data-order="1"] > div {
+        background-color: rgba(37, 116, 169, 0.85);
+        background-image: url(../images/arrow-down.png);
+        background-position: center 96%;
+        background-repeat: no-repeat;
+        color: #fff;
+    }
+section[data-order="2"] {
+    background-image: url(../images/bg2.jpg);
+    background-size: 100% auto;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 30px 30px rgba(247, 202, 24, 0.3);
+}
+    section[data-order="2"] > div {
+        background-color: #F4D03F;
+        background-color: rgba(244, 208, 63, 0.5);
+        background-image: none;
+        color: #fff;
+        min-height: 400px;
+    }
+    section[data-order="2"] p.date {
+        background-color: #F7CA18;
+        background-color: rgba(247, 202, 24, 0.75);
+    }
+section[data-order="3"],
+section[data-order="5"] {
+    background-color: #F7CA18;
+    color: #fff;
+}
+    section[data-order="3"] p.date,
+    section[data-order="5"] p.date {
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.75);
+        color: #333;
+    }
+section[data-order="4"] {
+    background-image: url(../images/bg3.jpg);
+    background-size: 100% auto;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 30px 30px rgba(249, 105, 14, 0.3);
+}
+    section[data-order="4"] > div {
+        background-color: #E87E04;
+        background-color: rgba(232, 126, 4, 0.5);
+        color: #fff;
+    }
+    section[data-order="4"] p.date {
+        background-color: #F9690E;
+        background-color: rgba(249, 105, 14, 0.75);
+    }
+    section[data-order="4"] .photo {
+        width: 30%;
+    }
+section[data-order="6"] {
+    background: #E74C3C;
+    color: #fff;
+}
+    section[data-order="6"] p.date {
+        background-color: #96281B;
+        background-color: rgba(150, 40, 27, 0.75);
+        color: #fff;
+    }
+section.bg-final {
+    background-image: url(../images/bg-final.jpg);
+    background-size: 100% auto;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 30px 30px #000;
+}
+    section.bg-final > div {
+        background: #2C3E50;
+        background: rgba(44, 62, 80, 0.5);
+    }
+    section.bg-final p.date {
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.75);
+        color: #2C3E50;
+    }
+.photo-left {
+    float: left;
+    margin: 0 0 20px;
+    width: 48%;
+}
+    .photo-left img {
+        float: right;
+    }
+.photo-right {
+    float: right;
+    margin: 0 0 20px;
+    width: 48%;
+}
+    .photo-right img {
+        float: left;
+    }
+
+/* Media-queries */
+@media screen and (min-width: 800px) {
+    section p.date {
+        top: 50%;
+    }
+}
+@media screen and (max-width: 800px) {
+    img.photo {
+        width: 70% !important;
+    }
+    section {
+        height: auto !important;
+    }
+    section > div {
+        background-image: none;
+        height: auto !important;
+        padding: 100px 10%;
+        width: 100%;
+    }
+    section p.date {
+        bottom: 10px;
+    }
+    section p.text {
+        width: 100%;
+    }
+    section[data-order="2"],
+    section[data-order="4"],
+    section.bg-final {
+        background-attachment: scroll;
+    }
+    section[data-order="4"],
+    section.bg-final {
+        background-size: auto 100%;
+    }
+}
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+}
