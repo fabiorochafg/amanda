@@ -45,20 +45,6 @@ img {
         margin: 0 10px;
         width: 130px; 
     }
-footer {
-    bottom: 0;
-    height: 100px;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-}
-header {
-    height: 100px;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
 section {
     position: relative;
 }
@@ -80,7 +66,16 @@ section p.date {
     right: 0;
     z-index: 1;
 }
+section p.legend {
+    bottom: 40px;
+    color: #fff;
+    font-size: 80%;
+    position: absolute;
+    text-align: left;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
 section p.text {
+    font-weight: 700;
     margin: 0 auto;
     padding: 0 0 20px;
     text-align: center;
@@ -92,7 +87,7 @@ section p.text {
         text-transform: uppercase;
     }
 section[data-order="1"] {
-    background: url(../images/bg1.png) repeat 0 0;
+    background: url(../images/bg-1.png) repeat 0 0;
     background-attachment: fixed;
 }
     section[data-order="1"] > div {
@@ -103,63 +98,150 @@ section[data-order="1"] {
         color: #fff;
     }
 section[data-order="2"] {
-    background-image: url(../images/bg2.jpg);
+    background-color: #FFEE58;
+    background-image: url(../images/bg-2.jpg);
     background-size: 100% auto;
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    box-shadow: inset 0 0 30px 30px rgba(247, 202, 24, 0.3);
+    box-shadow: inset 0 0 30px 30px rgba(255, 238, 88, 0.3);
 }
     section[data-order="2"] > div {
-        background-color: #F4D03F;
-        background-color: rgba(244, 208, 63, 0.5);
+        background-color: #FFEE58;
+        background-color: rgba(255, 238, 88, 0.5);
         background-image: none;
         color: #fff;
         min-height: 600px;
     }
-    section[data-order="2"] p.date {
-        background-color: #F7CA18;
-        background-color: rgba(247, 202, 24, 0.75);
-    }
-section[data-order="3"],
-section[data-order="5"] {
-    background-color: #F7CA18;
+section[data-order="3"] {
+    background-color: #FFEB3B;
+    background-image: url(../images/bg-3.png);
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-attachment: fixed;    
     color: #fff;
 }
-    section[data-order="3"] p.date,
-    section[data-order="5"] p.date {
-        background-color: #fff;
-        background-color: rgba(255, 255, 255, 0.75);
-        color: #333;
+    section[data-order="3"] > div {
+        background-color: #FFEB3B;
+        background-color: rgba(255, 235, 59, 0.85);
+        color: #fff;
+    }
+    section[data-order="3"] p.text {
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
 section[data-order="4"] {
-    background-image: url(../images/bg3.jpg);
+    background-image: url(../images/bg-4.jpg);
     background-size: 100% auto;
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    box-shadow: inset 0 0 30px 30px rgba(249, 105, 14, 0.3);
+    box-shadow: inset 0 0 30px 30px rgba(253, 216, 53, 0.3);
 }
     section[data-order="4"] > div {
-        background-color: #E87E04;
-        background-color: rgba(232, 126, 4, 0.5);
+        background-color: #FDD835;
+        background-color: rgba(253, 216, 53, 0.5);
         color: #fff;
-    }
-    section[data-order="4"] p.date {
-        background-color: #F9690E;
-        background-color: rgba(249, 105, 14, 0.75);
     }
     section[data-order="4"] .photo {
         width: 30%;
     }
-section[data-order="6"] {
-    background: #E74C3C;
+section[data-order="5"] {
+    background-color: #FBC02D;
+    background-image: url(../images/bg-5.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 190px auto;
     color: #fff;
 }
-    section[data-order="6"] p.date {
-        background-color: #96281B;
-        background-color: rgba(150, 40, 27, 0.75);
-        color: #fff;
+    section[data-order="5"]:hover {
+        background-size: 220px auto;
+    }
+    section[data-order="5"] > header,
+    section[data-order="6"] > header {
+        background-image: url(../images/bg-5-div.png);
+        background-position: 0 0;
+        background-repeat: repeat-x;
+        display: block;
+        height: 100px;
+        margin: -17px 0 0;
+        position: absolute;
+        width: 100%;
+    }
+section[data-order="6"] {
+    background-color: #F9A825;
+    background-image: url(../images/bg-6.png);
+    background-position: center center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+section[data-order="7"] {
+    background: #F57F17;
+    background: -webkit-linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* W3C */
+    color: #fff;
+}
+    section[data-order="7"] p.text {
+        border-bottom: 2px dashed #ffb300;
+        margin: 0 auto 30px;
+        padding: 0 0 30px;
+        text-align: left;
+    } 
+    section[data-order="7"] p.text:last-of-type {
+        border-bottom: 0 none;
+        margin: 0 auto;
+        padding: 0;
+    }   
+section[data-order="8"] {
+    background-image: url(../images/bg-8.png);
+    background-size: 100% auto;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+    section[data-order="8"] span {
+        color: #EC407A;
+    }
+section[data-order="9"] {
+    background: #FF6F00;
+    background-image: url(../images/bg-9.png);
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+section[data-order="10"] {
+    background-color: #E65100;
+    background-image: url(../images/bg-10.jpg);
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 400px;
+}
+    section[data-order="10"] > div {
+        background: #E65100;
+        background: rgba(230, 81, 0, 0.2);
+        height: 400px;
+    }
+section[data-order="11"] {
+    background: #E65100;
+    background-image: url(../images/bg-11.jpg);
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 400px;
+}
+    section[data-order="11"] > div {
+        background: #E65100;
+        background: rgba(230, 81, 0, 0.1);
+        height: 400px;
     }
 section.bg-final {
     background-image: url(../images/bg-final.jpg);
@@ -173,11 +255,45 @@ section.bg-final {
         background: #2C3E50;
         background: rgba(44, 62, 80, 0.5);
     }
-    section.bg-final p.date {
-        background-color: #fff;
-        background-color: rgba(255, 255, 255, 0.75);
-        color: #2C3E50;
-    }
+section[data-order="2"] p.date {
+    background-color: #E65100;
+}
+section[data-order="3"] p.date {
+    background-color: #E65100;
+}
+section[data-order="4"] p.date {
+    background-color: #FF6F00;
+}
+section[data-order="5"] p.date {
+    background-color: #F57F17;
+}
+section[data-order="6"] p.date {
+    background-color: #F57F17;
+}
+section[data-order="7"] p.date {
+    background-color: #FBC02D;
+    color: #222;
+}
+section[data-order="8"] p.date {
+    background-color: #FDD835;
+    color: #222;
+}
+section[data-order="9"] p.date {
+    background-color: #FFEB3B;
+    color: #222;
+}
+section[data-order="10"] p.date {
+    background-color: #FFEE58;
+    color: #222;
+}
+section[data-order="11"] p.date {
+    background-color: #FFEE58;
+    color: #222;
+}
+section.bg-final p.date {
+    background-color: #fff;
+    color: #2C3E50;
+}
 .photo-left {
     float: left;
     margin: 0 0 20px;
@@ -205,12 +321,7 @@ section.bg-final {
     img.photo {
         width: 70% !important;
     }
-    section {
-        height: auto !important;
-    }
     section > div {
-        background-image: none;
-        height: auto !important;
         padding: 100px 10%;
         width: 100%;
     }
@@ -225,7 +336,11 @@ section.bg-final {
     section.bg-final {
         background-attachment: scroll;
     }
+    section[data-order="2"],
     section[data-order="4"],
+    section[data-order="8"],
+    section[data-order="10"],
+    section[data-order="11"],
     section.bg-final {
         background-size: auto 100%;
     }
