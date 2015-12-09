@@ -15,6 +15,11 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+body {
+    background: #fff;
+    font-family: 'Coming Soon', cursive;
+    font-size: 140%;
+}
 a,
 a:active {
     color: #666;
@@ -24,19 +29,29 @@ a:hover {
     color: #333;
     text-decoration: underline;
 }
-body {
-    background: #fff;
-    font-family: 'Coming Soon', cursive;
-    font-size: 200%;
+footer {
+    background: #222;
+    color: #fff;
+    font-size: 80%;
+    padding: 50px;
+}
+footer > p {
+    float: left;
+}
+h1 {
+    font-weight: 700;
+    padding: 0 0 50px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 img {
     border: 7px solid #fff;
 }
     img.photo {
+        box-shadow: 0 0 30px #444;
         display: flex;
         display: table;
         margin: 0 auto;
-        width: 50%;
+        width: 80%;
     }
     img.profile {
         border-radius: 50%;
@@ -46,41 +61,46 @@ img {
         width: 130px; 
     }
 section {
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 section > div {
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 150px 100px;
-}
-    section:last-child > div {
-        background: none;
-    }
-section p.date {
-    background: rgba(0, 0, 0, 0.75);
-    border-radius: 20px 0 0 20px;
+    border-radius: 3px;
     color: #fff;
-    font-size: 50%;
+    height: 100%;
+    padding: 50px 50px 80px;
+
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+section p.date {
+    background: #ec407a;
+    border-radius: 20px 0 0 20px;
+    bottom: 20px;
+    box-shadow: 4px 4px 10px #444;
+    color: #fff;
+    font-size: 60%;
     padding: 10px 30px 10px 20px;
     position: absolute;
     right: 0;
     z-index: 1;
 }
 section p.legend {
-    bottom: 40px;
-    color: #fff;
+    bottom: 80px;
     font-size: 80%;
+    left: 50px;
     position: absolute;
+    right: 50px;
     text-align: left;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 section p.text {
-    font-weight: 700;
-    margin: 0 auto;
     padding: 0 0 20px;
     text-align: center;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    width: 50%;
+    width: 100%;
 }
     section p.text strong {
         font-weight: 600;
@@ -91,231 +111,265 @@ section[data-order="1"] {
     background-attachment: fixed;
 }
     section[data-order="1"] > div {
-        background-color: rgba(37, 116, 169, 0.85);
-        background-image: url(../images/arrow-down.png);
-        background-position: center 96%;
-        background-repeat: no-repeat;
-        color: #fff;
+        background: rgba(255, 128, 128, 0.85);
     }
-section[data-order="2"] {
-    background-color: #FFEE58;
-    background-image: url(../images/bg-2.jpg);
-    background-size: 100% auto;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    box-shadow: inset 0 0 30px 30px rgba(255, 238, 88, 0.3);
+section[data-order="14-12-01"] {
+    background-color: #BE90D4;
+    background-image: url(../images/bg-14-12-01.jpg);
+    box-shadow: inset 0 0 30px 30px rgba(190, 144, 212, 0.3);
 }
-    section[data-order="2"] > div {
-        background-color: #FFEE58;
-        background-color: rgba(255, 238, 88, 0.5);
-        background-image: none;
-        color: #fff;
-        min-height: 600px;
+    section[data-order="14-12-01"] > div {
+        background: #BE90D4;
+        background: rgba(190, 144, 212, 0.5);
     }
-section[data-order="3"] {
-    background-color: #FFEB3B;
-    background-image: url(../images/bg-3.png);
+section[data-order="14-12-02"] {
+    background-color: #F7CA18;
+    background-image: url(../images/bg-14-12-02.png);
     background-position: 0 0;
     background-repeat: repeat;
     background-attachment: fixed;    
-    color: #fff;
 }
-    section[data-order="3"] > div {
-        background-color: #FFEB3B;
-        background-color: rgba(255, 235, 59, 0.85);
-        color: #fff;
+    section[data-order="14-12-02"] > div {
+        background-color: #F7CA18;
+        background-color: rgba(247, 202, 24, 0.65);
     }
-    section[data-order="3"] p.text {
-        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    section[data-order="14-12-02"] p.text {
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     }
-section[data-order="4"] {
-    background-image: url(../images/bg-4.jpg);
-    background-size: 100% auto;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+section[data-order="14-12-05"] {
+    background-image: url(../images/bg-14-12-05.jpg);
     box-shadow: inset 0 0 30px 30px rgba(253, 216, 53, 0.3);
 }
-    section[data-order="4"] > div {
+    section[data-order="14-12-05"] > div {
         background-color: #FDD835;
         background-color: rgba(253, 216, 53, 0.5);
-        color: #fff;
     }
-    section[data-order="4"] .photo {
-        width: 30%;
+    section[data-order="14-12-05"] .photo {
+        box-shadow: 0 0 30px #444;
+        width: 50%;
     }
-section[data-order="5"] {
+section[data-order="14-12-19"] {
     background-color: #FBC02D;
-    background-image: url(../images/bg-5.png);
+    background-image: url(../images/bg-14-12-19-1.png);
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: 190px auto;
     color: #fff;
 }
-    section[data-order="5"]:hover {
+    section[data-order="14-12-19"]:hover {
         background-size: 220px auto;
     }
-    section[data-order="5"] > header,
-    section[data-order="6"] > header {
-        background-image: url(../images/bg-5-div.png);
+    section[data-order="14-12-19"] > div {
+        background-image: url(../images/bg-14-12-19-2.png);
         background-position: 0 0;
         background-repeat: repeat-x;
         display: block;
         height: 100px;
-        margin: -17px 0 0;
         position: absolute;
         width: 100%;
     }
-section[data-order="6"] {
+section[data-order="14-12-31"] {
+    background-image: url(../images/bg-14-12-31.jpg);
+    box-shadow: inset 0 0 30px 30px rgba(89, 171, 227, 0.3);
+}
+    section[data-order="14-12-31"] > div {
+        background-color: #59ABE3;
+        background-color: rgba(89, 171, 227, 0.5);
+    }
+    section[data-order="14-12-31"] .photo {
+        box-shadow: 0 0 30px #444;
+        width: 50%;
+    }
+section[data-order="15-01-15"] {
     background-color: #F9A825;
-    background-image: url(../images/bg-6.png);
+    background-image: url(../images/bg-15-01-15.png);
     background-position: center center;
     background-repeat: repeat;
     background-attachment: fixed;
-    color: #fff;
 }
-section[data-order="7"] {
+    section[data-order="15-01-15"] .photo {
+        width: 80%;
+    }
+section[data-order="15-01-29"] {
     background: #F57F17;
     background: -webkit-linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* Chrome 10+, Saf5.1+ */
     background:    -moz-linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* FF3.6+ */
     background:     -ms-linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* IE10 */
     background:      -o-linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* Opera 11.10+ */
     background:         linear-gradient(90deg, #FF8008 10%, #F57F17 90%); /* W3C */
-    color: #fff;
 }
-    section[data-order="7"] p.text {
+    section[data-order="15-01-29"] p.text {
         border-bottom: 2px dashed #ffb300;
-        margin: 0 auto 30px;
-        padding: 0 0 30px;
+        margin: 0 auto 10px;
+        padding: 0 0 10px;
         text-align: left;
     } 
-    section[data-order="7"] p.text:last-of-type {
+    section[data-order="15-01-29"] p.text:last-of-type {
         border-bottom: 0 none;
         margin: 0 auto;
         padding: 0;
     }   
-section[data-order="8"] {
-    background-image: url(../images/bg-8.png);
-    background-size: 100% auto;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #fff;
+section[data-order="15-02-13"] {
+    background-image: url(../images/bg-15-02-13.png);
 }
-    section[data-order="8"] span {
+    section[data-order="15-02-13"] span {
         color: #EC407A;
     }
-section[data-order="9"] {
+section[data-order="15-02-14"] {
     background: #FF6F00;
-    background-image: url(../images/bg-9.png);
+    background-image: url(../images/bg-15-02-14.png);
     background-position: 0 0;
     background-repeat: repeat;
     background-attachment: fixed;
     color: #fff;
 }
-section[data-order="10"] {
-    background-color: #E65100;
-    background-image: url(../images/bg-10.jpg);
-    background-size: 100% auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 400px;
+section[data-order="15-02-15"] {
+    background-image: url(../images/bg-15-02-15.jpg);
 }
-    section[data-order="10"] > div {
+section[data-order="15-02-16"] {
+    background-color: #E65100;
+    background-image: url(../images/bg-15-02-16.jpg);
+}
+    section[data-order="15-02-16"] > div {
         background: #E65100;
         background: rgba(230, 81, 0, 0.2);
-        height: 400px;
     }
-section[data-order="11"] {
-    background: #E65100;
-    background-image: url(../images/bg-11.jpg);
-    background-size: 100% auto;
+section[data-order="15-05-03"] {
+    background-image: url(../images/bg-15-05-03.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+section[data-order="15-05-10"] {
+    background-image: url(../images/bg-15-05-10.jpg);
+}
+section[data-order="15-05-13"] {
+    background-image: url(../images/bg-15-05-13.jpg);
+}
+section[data-order="15-05-23"] {
+    background-image: url(../images/bg-15-05-23.jpg);
+}
+section[data-order="15-05-30"] {
+    background-image: url(../images/bg-15-05-30.jpg);
+}
+section[data-order="15-06-06"] {
+    background-image: url(../images/bg-15-06-06.jpg);
+    box-shadow: inset 0 0 30px 30px rgba(217, 30, 24, 0.3);
+}
+    section[data-order="15-06-06"] > div {
+        background-color: #D91E18;
+        background-color: rgba(217, 30, 24, 0.5);
+    }
+    section[data-order="15-06-06"] .photo {
+        box-shadow: 0 0 30px #444;
+        width: 50%;
+    }
+section[data-order="15-06-07"] {
+    background-image: url(../images/bg-15-06-07.jpg);
+}
+    section[data-order="15-06-07"] .photo-left {
+        width: 35%;
+    }
+section[data-order="15-06-19"] {
+    background-image: url(../images/bg-15-06-19.jpg);
+}
+section[data-order="15-06-20"] {
+    background-image: url(../images/bg-15-06-20.jpg);
+}
+section[data-order="15-07-26"] {
+    background-image: url(../images/bg-15-07-26.jpg);
+}
+section[data-order="15-07-26"] .photo-center {
+    float: left;
+    width: 30%;
+}
+section[data-order="15-07-26"] .photo-left,
+section[data-order="15-07-26"] .photo-right {
+    width: 30%;
+}
+section[data-order="15-08-06-1"] {
+    background-image: url(../images/bg-15-08-06-1.jpg);
+}
+section[data-order="15-08-06-2"] {
+    background-image: url(../images/bg-15-08-06-2.jpg);
+}
+section[data-order="15-10-06"] {
+    background-image: url(../images/bg-15-10-06.jpg);
+    box-shadow: inset 0 0 30px 30px rgba(0, 177, 106, 0.6);
+}
+    section[data-order="15-10-06"] > div {
+        background-color: #00B16A;
+        background-color: rgba(0, 177, 106, 0.5);
+    }
+section.with-background {
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 400px;
+    background-size: cover;
+    min-height: 400px;
 }
-    section[data-order="11"] > div {
-        background: #E65100;
-        background: rgba(230, 81, 0, 0.1);
-        height: 400px;
-    }
-section.bg-final {
-    background-image: url(../images/bg-final.jpg);
-    background-size: 100% auto;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    box-shadow: inset 0 0 30px 30px #000;
+#go-to-top {
+    background: url(../images/arrow-up.png) no-repeat center 0;
+    display: block;
+    float: right;
+    height: 32px;
+    text-indent: -9000px;
+    width: 32px;
 }
-    section.bg-final > div {
-        background: #2C3E50;
-        background: rgba(44, 62, 80, 0.5);
-    }
-section[data-order="2"] p.date {
-    background-color: #E65100;
+#go-to-top:hover {
+    opacity: 0.6;
 }
-section[data-order="3"] p.date {
-    background-color: #E65100;
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;    
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    background: #444; 
+    padding: 20px;
 }
-section[data-order="4"] p.date {
-    background-color: #FF6F00;
+.flex-container > section {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 360px;
+    margin: 20px;
 }
-section[data-order="5"] p.date {
-    background-color: #F57F17;
-}
-section[data-order="6"] p.date {
-    background-color: #F57F17;
-}
-section[data-order="7"] p.date {
-    background-color: #FBC02D;
-    color: #222;
-}
-section[data-order="8"] p.date {
-    background-color: #FDD835;
-    color: #222;
-}
-section[data-order="9"] p.date {
-    background-color: #FFEB3B;
-    color: #222;
-}
-section[data-order="10"] p.date {
-    background-color: #FFEE58;
-    color: #222;
-}
-section[data-order="11"] p.date {
-    background-color: #FFEE58;
-    color: #222;
-}
-section.bg-final p.date {
-    background-color: #fff;
-    color: #2C3E50;
+.flex-container > section.highlight {
+    flex-basis: 800px;
+    min-height: 600px;
 }
 .photo-left {
     float: left;
-    margin: 0 0 20px;
-    width: 48%;
+    margin: 0 10px 20px 0;
+    width: 45%;
 }
     .photo-left img {
         float: right;
     }
 .photo-right {
     float: right;
-    margin: 0 0 20px;
-    width: 48%;
+    margin: 0 0 20px 10px;
+    width: 45%;
 }
     .photo-right img {
         float: left;
     }
 
 /* Media-queries */
-@media screen and (min-width: 800px) {
-    section p.date {
-        top: 50%;
+@media print {
+    .flex-container {
+        display: block;
     }
+}
+@media screen and (min-width: 800px) {
+
 }
 @media screen and (max-width: 800px) {
     img.photo {
@@ -325,18 +379,13 @@ section.bg-final p.date {
         padding: 100px 10%;
         width: 100%;
     }
-    section p.date {
-        bottom: 10px;
-    }
     section p.text {
         width: 100%;
     }
-    section[data-order="2"],
     section[data-order="4"],
     section.bg-final {
         background-attachment: scroll;
     }
-    section[data-order="2"],
     section[data-order="4"],
     section[data-order="8"],
     section[data-order="10"],
@@ -346,5 +395,10 @@ section.bg-final p.date {
     }
 }
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-
+    .flex-container {
+        -webkit-flex-flow: column nowrap;
+        -moz-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    }
 }

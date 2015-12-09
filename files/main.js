@@ -4,14 +4,16 @@ new WOW().init();
 
 $(document).ready(function() {
 
-	$("section.equal-height, section.equal-height > div").css("height", $(window).height());
+	$("#go-to-top").click(function(){
+		$('html, body').animate({scrollTop:0}, 'slow');
+		return false;
+	});
 
-
-	$(window).scroll(function() {
-	    var x = $(this).scrollTop();
+	// $(window).scroll(function() {
+	    // var x = $(this).scrollTop();
 	    // $('section[data-order="5"] > header').css('background-position', 'right ' + (x * .1) + 'px');
 	    // $('section[data-order="5"] > header').css({'background-position': "left " + (x*.1) + "px, " + "right " + (x*.1)+"px"});
-	});
+	// });
 
 });
 
