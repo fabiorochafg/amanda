@@ -9,11 +9,9 @@ $(document).ready(function() {
 		return false;
 	});
 
-	// $(window).scroll(function() {
-	    // var x = $(this).scrollTop();
-	    // $('section[data-order="5"] > header').css('background-position', 'right ' + (x * .1) + 'px');
-	    // $('section[data-order="5"] > header').css({'background-position': "left " + (x*.1) + "px, " + "right " + (x*.1)+"px"});
-	// });
+	if (window.innerWidth <= 800 && window.innerHeight <= 600) {
+		$('p.date').removeClass("wow");
+	}
 
 });
 

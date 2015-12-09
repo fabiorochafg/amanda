@@ -294,6 +294,28 @@ section[data-order="15-08-06-1"] {
 section[data-order="15-08-06-2"] {
     background-image: url(../images/bg-15-08-06-2.jpg);
 }
+section[data-order="15-08-06-3"] {
+    background-image: url(../images/bg-15-08-06-3.jpg);
+}
+section[data-order="15-08-07"] {
+    background-image: url(../images/bg-15-08-07.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+section[data-order="15-08-12"] {
+    background-image: url(../images/bg-15-08-12.jpg);
+}
+section[data-order="15-08-16"] {
+    background-image: url(../images/bg-15-08-16.jpg);
+}
+section[data-order="15-08-20"] {
+    background-image: url(../images/bg-15-08-20.jpg);
+}
+section[data-order="15-08-28"] {
+    background-image: url(../images/bg-15-08-28.jpg);
+}
 section[data-order="15-10-06"] {
     background-image: url(../images/bg-15-10-06.jpg);
     box-shadow: inset 0 0 30px 30px rgba(0, 177, 106, 0.6);
@@ -368,9 +390,6 @@ section.with-background {
         display: block;
     }
 }
-@media screen and (min-width: 800px) {
-
-}
 @media screen and (max-width: 800px) {
     img.photo {
         width: 70% !important;
@@ -382,16 +401,14 @@ section.with-background {
     section p.text {
         width: 100%;
     }
-    section[data-order="4"],
-    section.bg-final {
-        background-attachment: scroll;
+    .flex-container {
+        padding: 10px;
     }
-    section[data-order="4"],
-    section[data-order="8"],
-    section[data-order="10"],
-    section[data-order="11"],
-    section.bg-final {
-        background-size: auto 100%;
+    .flex-container > section {
+        margin: 10px;
+    }
+    .flex-container > section.highlight {
+        flex-basis: 360px;
     }
 }
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
@@ -400,5 +417,10 @@ section.with-background {
         -moz-flex-flow: column nowrap;
         -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
+    }
+    .photo,
+    .photo-left,
+    .photo-right {
+        display: none !important;
     }
 }
